@@ -15,13 +15,14 @@ class Profile extends Component {
 
     return (
       <div class="card bg-light text-dark">
-        {/* <h1>{currentUser.username}</h1>
+        <h1>{currentUser.username}</h1>
         <p>
           <strong>Id:</strong> {currentUser.id}
         </p>
         <p>
           <strong>Email:</strong> {currentUser.email}
-        </p> */}
+        </p>
+
       
           </div>
     );

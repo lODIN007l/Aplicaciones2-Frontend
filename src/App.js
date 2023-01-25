@@ -58,8 +58,8 @@ class App extends Component {
 
     return (
       <Router history={history}>
-        <div>
-          <nav className="navbar navbar-fixed-top navbar-expand navbar-dark bg-dark">
+        <div className="">
+          <nav className="navbar  navbar-expand navbar-dark bg-dark">
             <Link to={"/"} className="navbar-brand">
               Escuela jose Maria Roman
             </Link>
@@ -107,6 +107,7 @@ class App extends Component {
 
           <div >
             <Switch>
+              <Route exact path={["/", "/login"]} component={Login} />
               <Route exact path={["/", "/register"]} component={Register} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
