@@ -1,6 +1,9 @@
 import React, { Component ,useState} from "react";
 import { Redirect } from 'react-router-dom';
 import { connect } from "react-redux";
+import { logout } from "../../actions/auth";
+import { clearMessage } from "../../actions/message";
+
 import {
     RiHome3Line,
     RiFileCopyLine,
@@ -11,7 +14,7 @@ import {
   } from "react-icons/ri";
 
 class Sidebar extends Component {
-    
+  
  
     render() {
     //   const [showMenu, setShowMenu] = useState(false);
@@ -22,9 +25,8 @@ class Sidebar extends Component {
       }
   
       return (
-        <>
         <div
-          className="bg-primary-900 h-full fixed lg:static w-[80%] md:w-[40%] lg:w-full transition-all z-50 duration-300 "
+          className="bg-primary-900 h-full overflow-hidden fixed lg:static w-[80%] md:w-[40%] lg:w-full transition-all z-50 duration-300 "
         >
           {/* Profile */}
           <div className="flex flex-col items-center justify-center p-8 gap-2 h-[30vh]">
@@ -38,7 +40,7 @@ class Sidebar extends Component {
             </p>
           </div>
           {/* Nav */}
-          <div className="bg-primary-300 p-8 rounded-tr-[100px] h-[70vh] overflow-y-scroll flex flex-col justify-between gap-8">
+          <div className="bg-primary-300 p-8 rounded-tr-[100px] h-[70vh]  flex flex-col justify-between gap-8">
             <nav className="flex flex-col gap-8">
               <a
                 href="#"
@@ -66,18 +68,17 @@ class Sidebar extends Component {
               </a>
             </nav>
             <div className="bg-primary-900/50 text-white p-4 rounded-xl m-auto">
-              <a className="text-white font-bold text-center " href="#">Cerrar Sesion</a>
+              <a className="text-white font-bold text-center " href="#" onClick={this.logOut} >Cerrar Sesion</a>
             </div>
           </div>
         </div>
-        {/* Button mobile */}
-        <button
+        // {/* Button mobile */}
+        // <button
           
-          className="lg:hidden fixed right-4 bottom-4 text-2xl bg-primary-900 p-2.5 rounded-full text-white z-50"
-        >
-          <RiCloseFill />  
-        </button>
-      </>
+        //   className="lg:hidden fixed right-4 bottom-4 text-2xl bg-primary-900 p-2.5 rounded-full text-white z-50"
+        // >
+        //   <RiCloseFill />  
+        // </button>
       );
     }
   }

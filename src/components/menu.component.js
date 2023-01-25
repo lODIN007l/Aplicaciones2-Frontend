@@ -17,9 +17,9 @@ class Menu extends Component {
   
       return (
       
-    <div className="grid lg:grid-cols-4 xl:grid-cols-6 min-h-screen">
+    <div className="grid lg:grid-cols-4 xl:grid-cols-6 min-h-screen ">
       <Sidebar />
-      <main className="lg:col-span-3 xl:col-span-5 bg-gray-100 p-8 h-[100vh] overflow-y-scroll">
+      <main className="lg:col-span-3 xl:col-span-5 bg-gray-100 p-8 h-[100vh] overflow-scroll overflow-x-hidden">
         <Header />
         {/* seccion 1 */}
         <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 mt-10 ml-20 gap-8">

@@ -59,7 +59,7 @@ class App extends Component {
     return (
       <Router history={history}>
         <div className="">
-          <nav className="navbar  navbar-expand navbar-dark bg-dark">
+          <nav className="navbar  navbar-expand navbar-dark bg-[#120037]">
             <Link to={"/"} className="navbar-brand">
               Escuela jose Maria Roman
             </Link>
@@ -68,7 +68,7 @@ class App extends Component {
               {currentUser && (
                 <li className="nav-item">
                   <Link to={"/menu"} className="nav-link">
-                    Dashboard
+                    Menu
                   </Link>
                 </li>
               )}
@@ -106,6 +106,51 @@ class App extends Component {
   
 
           <div >
+                      {/* <nav className="navbar  navbar-expand navbar-dark bg-[#120037]">
+            <Link to={"/"} className="navbar-brand">
+              Escuela jose Maria Roman
+            </Link>
+            <div className="navbar-nav mr-auto">
+              
+              {currentUser && (
+                <li className="nav-item">
+                  <Link to={"/menu"} className="nav-link">
+                    Menu
+                  </Link>
+                </li>
+              )}
+            </div>
+
+            {currentUser ? (
+              <div className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link to={"/profile"} className="nav-link">
+                    Perfil
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <a href="/login" className="nav-link" onClick={this.logOut}>
+                    Cerrar Sesion
+                  </a>
+                </li>
+              </div>
+            ) : (
+              <div className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link to={"/login"} className="nav-link">
+                    Iniciar Sesion
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link to={"/register"} className="nav-link">
+                    Registrarse
+                  </Link>
+                </li>
+              </div>
+            )}
+          </nav>
+   */}
             <Switch>
               <Route exact path={["/", "/login"]} component={Login} />
               <Route exact path={["/", "/register"]} component={Register} />
