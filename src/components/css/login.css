@@ -1,0 +1,7 @@
+.bg {
+    background-image: url("/src/assets/escuela-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity:0.2;
+
+  }
